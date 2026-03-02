@@ -24,7 +24,10 @@ Gem::Specification.new do |s|
 
   s.files = Dir.glob("lib/**/*") + Dir.glob("bin/**/*") + %w[README.md LICENSE.txt CHANGELOG.md]
   s.require_paths = ["lib"]
-  s.required_ruby_version = ">= 2.7"
+  s.required_ruby_version = ">= 3.2"
+
+  s.add_dependency "rails", ">= 7.0"
+  s.add_dependency "smart_dump"
 
   s.add_development_dependency "bundler", ">= 1.15"
   s.add_development_dependency "combustion", ">= 1.1"
