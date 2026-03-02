@@ -7,7 +7,7 @@ end
 ENV["RAILS_ENV"] = "test"
 
 require "combustion"
-require "dunkelziffer"
+require "static_db"
 
 begin
   # See https://github.com/pat/combustion

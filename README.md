@@ -1,8 +1,8 @@
-[![Gem Version](https://badge.fury.io/rb/dunkelziffer.svg)](https://rubygems.org/gems/dunkelziffer)
-[![Build](https://github.com/dunkelziffer/dunkelziffer/workflows/Build/badge.svg)](https://github.com/dunkelziffer/dunkelziffer/actions)
-[![JRuby Build](https://github.com/dunkelziffer/dunkelziffer/workflows/JRuby%20Build/badge.svg)](https://github.com/dunkelziffer/dunkelziffer/actions)
+[![Gem Version](https://badge.fury.io/rb/static_db.svg)](https://rubygems.org/gems/static_db)
+[![Build](https://github.com/dunkelziffer/static_db/workflows/Build/badge.svg)](https://github.com/dunkelziffer/static_db/actions)
+[![JRuby Build](https://github.com/dunkelziffer/static_db/workflows/JRuby%20Build/badge.svg)](https://github.com/dunkelziffer/static_db/actions)
 
-# Dunkelziffer Gem Test
+# static_db
 
 TBD
 
@@ -14,7 +14,7 @@ Adding to a gem:
 # my-cool-gem.gemspec
 Gem::Specification.new do |spec|
   # ...
-  spec.add_dependency "dunkelziffer"
+  spec.add_dependency "static_db"
   # ...
 end
 ```
@@ -23,7 +23,7 @@ Or adding to your project:
 
 ```ruby
 # Gemfile
-gem "dunkelziffer"
+gem "static_db"
 ```
 
 ### Supported Ruby versions
@@ -37,7 +37,7 @@ TBD
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/dunkelziffer/dunkelziffer](https://github.com/dunkelziffer/dunkelziffer).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/dunkelziffer/static_db](https://github.com/dunkelziffer/static_db).
 
 ## Credits
 
