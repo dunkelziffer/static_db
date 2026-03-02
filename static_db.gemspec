@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 3.2"
 
   s.add_dependency "rails", ">= 7.0"
-  s.add_dependency "smart_dump"
+  # s.add_dependency "smart_dump"
 
   s.add_development_dependency "bundler", ">= 1.15"
   s.add_development_dependency "combustion", ">= 1.1"
