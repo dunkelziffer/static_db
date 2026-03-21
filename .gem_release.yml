@@ -1,4 +1,7 @@
 bump:
   file: lib/static_db/version.rb
-  skip_ci: true
+  skip_ci: false
 
+release:
+  tag: true
+  push: true
