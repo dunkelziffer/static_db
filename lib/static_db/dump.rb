@@ -3,7 +3,7 @@
 module StaticDb
   class Dump
 
-    attr_reader :fixture_path
+    attr_reader :fixture_path, :models_to_be_saved
 
     def initialize(fixture_path:)
       @fixture_path = Pathname.new(fixture_path)
@@ -37,9 +37,7 @@ module StaticDb
 
       errors = []
 
-      ActiveRecord::Base.descendants.each do |model|
-        next if model.abstract_class?
-
+      models_to_be_saved.each do |model|
         model.find_each do |record|
           unless record.valid?
             errors << { model: model.name, slug: record.slug, errors: record.errors.full_messages }
@@ -65,7 +63,7 @@ module StaticDb
 
     def dump_fixtures!
       reset_data_directory!
-      @models_to_be_saved.each { |model| format_and_write_yaml_file!(model) }
+      models_to_be_saved.each { |model| format_and_write_yaml_file!(model) }
     end
 
     def reset_data_directory!
