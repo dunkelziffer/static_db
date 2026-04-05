@@ -37,6 +37,6 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = ">= 3.2"
 
-  s.add_dependency "rails", ">= 7.0"
+  s.add_dependency "rails", ">= 7.2"
   s.add_dependency "ostruct", ">= 0.6"
 end
