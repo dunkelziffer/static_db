@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require "static_db/initializer"
 
 module StaticDb # :nodoc:

@@ -1,25 +1,20 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Report a bug
 title: ''
-labels: ''
+labels: 'bug'
 assignees: dunkelziffer
 
 ---
 
-## What did you do?
+## Versions
 
-## What did you expect to happen?
+- **Ruby: ?**
+- **Rails: ?**
+- **static_db: ?**
 
-## What actually happened?
+## Observed behavior
 
-## Additional context
+## Expected behavior
 
-## Environment
-
-**Ruby Version:**
-
-**Framework Version (Rails, whatever):**
-
-**static_db Version:**
-
+## Additional notes

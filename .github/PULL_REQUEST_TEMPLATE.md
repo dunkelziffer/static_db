@@ -1,10 +1,19 @@
-<!--
-  First of all, thanks for contributing!
-
-  If it's a typo fix or minor documentation update feel free to skip the rest of this template!
--->
+<!-- Thanks for contributing! -->
 
 ## What is the purpose of this pull request?
+
+<!-- Please select one: -->
+- [ ] New feature
+- [ ] Bug fix
+- [ ] Chore (e.g. small fixes like typos)
+
+<!-- ... or provide further info here! -->
+
+## Summary
+
+<!-- Keep it short -->
+
+<!-- Skip if chore -->
 
 <!--
   If it's a bug fix, then link it to the issue, for example:
@@ -12,13 +21,8 @@
   Fixes #xxx
 -->
 
-## What changes did you make? (overview)
-
-## Is there anything you'd like reviewers to focus on?
-
 ## Checklist
 
-- [ ] I've added tests for this change
-- [ ] I've added a Changelog entry
-- [ ] I've updated a documentation
-
+- [ ] I have added tests for this change
+- [ ] I have added a CHANGELOG.md entry
+- [ ] I have updated the documentation

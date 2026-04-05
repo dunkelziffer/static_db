@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 namespace :static do
   desc "Create fixtures from database; accepts optional path argument"
   task :dump, [:path] => :environment do |t, args|
