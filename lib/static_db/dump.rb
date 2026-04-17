@@ -83,7 +83,7 @@ module StaticDb
     def format_instances(model:, instances:)
       output = {}
 
-      instances.each.with_index(1) do |instance, index|
+      instances.each do |instance|
         attrs = {}
 
         model.columns.each do |column|
@@ -91,7 +91,7 @@ module StaticDb
           attrs[column.name] = value unless value.nil?
         end
 
-        output["#{model}_#{index}"] = attrs
+        output["#{model}_#{model.id}"] = attrs
       end
 
       output
