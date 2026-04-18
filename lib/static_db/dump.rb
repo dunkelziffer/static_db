@@ -91,7 +91,7 @@ module StaticDb
           attrs[column.name] = value unless value.nil?
         end
 
-        output["#{model}_#{model.id}"] = attrs
+        output["#{model}_#{instance.id}"] = attrs
       end
 
       output
