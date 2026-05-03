@@ -1,23 +1,19 @@
 namespace :static do
   desc "Create fixtures from database; accepts optional path argument"
   task :dump, [:path] => :environment do |t, args|
-    path = if args[:path].blank?
-      StaticDb.config.fixture_path
+    if args[:path].blank?
+      StaticDb::Dump.new.perform
     else
-      Rails.root.join(args[:path])
+      StaticDb::Dump.new(fixture_path: Rails.root.join(args[:path])).perform
     end
-
-    StaticDb::Dump.new(fixture_path: path).perform
   end
 
   desc "Create database from fixtures; accepts optional path argument"
   task :load, [:path] => :environment do |t, args|
-    path = if args[:path].blank?
-      StaticDb.config.fixture_path
+    if args[:path].blank?
+      StaticDb::Load.new.perform
     else
-      Rails.root.join(args[:path])
+      StaticDb::Load.new(fixture_path: Rails.root.join(args[:path])).perform
     end
-
-    StaticDb::Load.new(fixture_path: path).perform
   end
 end

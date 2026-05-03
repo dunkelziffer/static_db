@@ -3,7 +3,7 @@ module StaticDb
 
     attr_reader :fixture_path, :models_to_be_saved
 
-    def initialize(fixture_path:)
+    def initialize(fixture_path: StaticDb.config.fixture_path)
       @fixture_path = Pathname.new(fixture_path)
       @models_to_be_saved = models
     end
@@ -11,24 +11,14 @@ module StaticDb
     def perform
       exit 1 if $skip_active_fixtures_dump
 
-      reenable_rake_tasks!
       validate_records!
 
       puts green("Dumping fixtures ...")
-
       dump_fixtures!
-      Rake::Task["db:drop"].invoke
-
       puts green("Done!")
     end
 
     private
-
-    def reenable_rake_tasks!
-      ["db:drop"].each do |task_name|
-        Rake::Task[task_name].reenable
-      end
-    end
 
     def validate_records!
       puts green("Validating records ...")

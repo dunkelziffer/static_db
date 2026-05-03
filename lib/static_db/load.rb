@@ -3,18 +3,14 @@ module StaticDb
 
     attr_reader :fixture_path
 
-    def initialize(fixture_path:)
+    def initialize(fixture_path: StaticDb.config.fixture_path)
       @fixture_path = Pathname.new(fixture_path)
     end
 
     def perform
       puts green("Loading fixtures ...")
-
-      reenable_rake_tasks!
-      Rake::Task["db:create"].invoke
-      Rake::Task["db:schema:load"].invoke
+      system("bin/rails", "db:drop", "db:create", "db:schema:load")
       load_fixtures!
-
       puts green("Done!")
     rescue => e
       puts red("Failed to load fixtures: #{e.message}")
@@ -24,12 +20,6 @@ module StaticDb
     end
 
     private
-
-    def reenable_rake_tasks!
-      ["db:create", "db:schema:load"].each do |task_name|
-        Rake::Task[task_name].reenable
-      end
-    end
 
     def load_fixtures!
       base_names = Dir.glob(File.join(fixture_path, "*.yml")).map do |file|
