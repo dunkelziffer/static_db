@@ -10,7 +10,7 @@ This project adheres to [Break Versioning](https://www.taoensso.com/break-versio
 
 ### Non-breaking
 
--
+- Remove unused dependency on `ostruct`
 
 ## [0.1.0] - 2026-05-03
 
