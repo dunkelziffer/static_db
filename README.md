@@ -7,14 +7,16 @@ Dump DB contents to YAML and load them back again. Aimed at SQLite. Committable 
 
 ## Installation
 
-WARNING: This gem modifies the Rails startup sequence. Don't use this gem unless you want to build a static site generator. This gem also creates and drops the DB for you.
+> ⚠️ This gem modifies the Rails startup sequence. Don't use this gem unless you want to build a static site generator. This gem also creates and drops the DB for you.
 
 Add it to your Rails project:
 
 ```ruby
 # Gemfile
 gem "static_db"
+```
 
+```ruby
 # config/initializer/static_db.rb
 StaticDb.configure do |config|
   # `content/data` is the default. You only need this initializer,
@@ -25,15 +27,15 @@ end
 
 ## Usage
 
-Only use on Rails projects with SQLite. Have a valid `db/schema.rb`. For additional dramatic effect, do a `rails db:drop`.
+> ⚠️ Only use on Rails projects with SQLite. Have a valid `db/schema.rb`.
 
 Start your app with `bin/dev`. You will notice that a DB gets created for you. It will be empty.
 
 Create some records. Then, stop your server with Ctrl+C.
 
-The DB contents will have been dumped to `content/data`. Your SQLite DB will be gone.
+The DB contents will have been dumped to `content/data`.
 
-Restart your server with `bin/dev`. Your SQLite DB will be back and populated with all previously stored data, recreated from `content/data`.
+Restart your server with `bin/dev`. Your SQLite DB will be dropped and recreated with all previously stored data from `content/data`.
 
 ## Contributing
 
