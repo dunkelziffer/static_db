@@ -6,6 +6,16 @@ This project adheres to [Break Versioning](https://www.taoensso.com/break-versio
 
 ### Breaking
 
+-
+
+### Non-breaking
+
+-
+
+## [0.1.0] - 2026-05-03
+
+### Breaking
+
 - Drop database at a different point in time now. It's possible, but unlikely that this breaks anything for you.
   - Previously: `db:drop` happend after dumping out data on shutdown.
     - If dumping data failed, your `.sqlite3` files would remain and the next boot would fail.
