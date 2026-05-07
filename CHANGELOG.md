@@ -6,11 +6,15 @@ This project adheres to [Break Versioning](https://www.taoensso.com/break-versio
 
 ### Breaking
 
--
+- Config option `fixture_path` was renamed to `static_db_path`.
+- The Rails boot sequence hooks are no longer active automatically. You need to opt-in via the config options `load` and `dump`.
+- The Rails boot sequence hooks no longer run for any `* build` command. They only run for `parklife build`.
 
 ### Non-breaking
 
--
+- All config options now support Procs or any other object responding to `.call()`.
+  - The default Proc for config option `static_db_path` now gets evaluated correctly.
+- Internal code cleanup
 
 ## [0.1.1] - 2026-05-03
 
