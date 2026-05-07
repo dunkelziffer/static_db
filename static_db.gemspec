@@ -3,8 +3,8 @@ require_relative "lib/static_db/version"
 Gem::Specification.new do |s|
   s.name = "static_db"
   s.version = StaticDb::VERSION
-  s.authors = ["Klaus Weidinger"]
-  s.email = ["weidkl@gmx.de"]
+  s.authors = [ "Klaus Weidinger" ]
+  s.email = [ "weidkl@gmx.de" ]
   s.license = "MIT"
 
   s.summary = "Dump DB contents to YAML and load them back again. Aimed at SQLite. Committable to git."

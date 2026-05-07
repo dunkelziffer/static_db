@@ -7,7 +7,7 @@ begin
   require "rubocop/rake_task"
   RuboCop::RakeTask.new
 rescue LoadError
-  task(:rubocop) {}
+  task(:rubocop) { }
 end
 
 task default: %w[rubocop spec]
