@@ -20,8 +20,6 @@ Gem::Specification.new do |s|
     "rubygems_mfa_required" => "true"
   }
 
-  s.post_install_message = "⚠️ This gem modifies the Rails startup sequence. Don't use this gem unless you want to build a static site generator. This gem also creates and drops the DB for you."
-
   # === CONTENTS ===
 
   gemspec = File.basename(__FILE__)

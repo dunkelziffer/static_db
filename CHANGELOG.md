@@ -12,6 +12,16 @@ This project adheres to [Break Versioning](https://www.taoensso.com/break-versio
 
 -
 
+## [0.2.1] - 2026-05-08
+
+### Breaking
+
+-
+
+### Non-breaking
+
+- Drop post-install message
+
 ## [0.2.0] - 2026-05-08
 
 ### Breaking
