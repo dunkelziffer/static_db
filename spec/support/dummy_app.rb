@@ -19,6 +19,16 @@ module DummyApp
 
     def root = Rails.root
 
+    def database_path = root.join(ActiveRecord::Base.connection_db_config.database)
+
+    # StaticDb::Load unlinks the database file and does not recreate it (see
+    # spec/static_db/load_spec.rb). The process carries on through its still-open
+    # handle, so without this the rest of the suite would run against an inode that no
+    # longer has a name — passing, but testing a ghost.
+    def ensure_database!
+      reset_schema! unless File.exist?(database_path)
+    end
+
     # Fresh database file, schema loaded in process. Cheap enough to do once per suite.
     def reset_schema!
       ActiveRecord::Base.connection_handler.clear_all_connections!

@@ -1,7 +1,10 @@
 RSpec.configure do |config|
   # Truncation, not a transaction: the code under test drops and recreates the database
   # from a subprocess, which no transaction would survive.
-  config.before { DummyApp.truncate! }
+  config.before do
+    DummyApp.ensure_database!
+    DummyApp.truncate!
+  end
 
   # `FixtureSet.create_fixtures` memoises per connection and fixture-set name, so the
   # second load in a process is a no-op. Without this, every example after the first

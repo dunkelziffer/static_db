@@ -89,7 +89,7 @@ RSpec.describe "the test harness" do
     it "reads the database at the adapter level, ordered by primary key" do
       seed_corpus!
 
-      expect(db_snapshot["authors"].map { |row| row["name"] }).to eq([ "J. R. R. Tolkien", "Ursula K. Le Guin" ])
+      expect(db_snapshot["authors"].map { |row| row["name"] }).to eq([ "Otfried Preußler", "Ursula K. Le Guin" ])
       expect(db_snapshot["authors"].first.keys).to include("id", "name", "created_at", "updated_at")
     end
 
