@@ -1,5 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/static_db.svg)](https://rubygems.org/gems/static_db)
-[![Build](https://github.com/dunkelziffer/static_db/workflows/Build/badge.svg)](https://github.com/dunkelziffer/static_db/actions)
+[![CI](https://github.com/dunkelziffer/static_db/actions/workflows/ci.yml/badge.svg)](https://github.com/dunkelziffer/static_db/actions/workflows/ci.yml)
 
 # static_db
 

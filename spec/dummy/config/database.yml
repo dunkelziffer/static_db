@@ -1,0 +1,15 @@
+# StaticDb::Load shells out to `bin/rails db:drop db:create db:schema:load`.
+# - In `RAILS_ENV=development` this works correctly. Specs that drive the real
+#   reset need to run in this environment.
+# - In `RAILS_ENV=test` this leaves no DB behind.
+default: &default
+  adapter: sqlite3
+  timeout: 5000
+
+development:
+  <<: *default
+  database: <%= ENV.fetch("STATIC_DB_DATABASE", "db/development.sqlite3") %>
+
+test:
+  <<: *default
+  database: <%= ENV.fetch("STATIC_DB_DATABASE", "db/test.sqlite3") %>
