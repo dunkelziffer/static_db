@@ -1,5 +1,5 @@
 ---
-ActiveStorage::Blob_1:
+active_storage_blobs_1:
   id: 1
   byte_size: 12
   checksum: XS9tZ84I9efUltMiwFPiLA==
@@ -9,7 +9,7 @@ ActiveStorage::Blob_1:
   key: ada-avatar
   metadata: '{"identified":true,"analyzed":true}'
   service_name: local
-ActiveStorage::Blob_2:
+active_storage_blobs_2:
   id: 2
   byte_size: 8
   checksum: uAkj14+jqCnSyA7w2dhqJQ==
@@ -19,7 +19,7 @@ ActiveStorage::Blob_2:
   key: ada-cv
   metadata: '{"identified":true,"analyzed":true}'
   service_name: local
-ActiveStorage::Blob_3:
+active_storage_blobs_3:
   id: 3
   byte_size: 11
   checksum: aS/R1Wjx+n/vRTGR0zudzQ==
@@ -29,7 +29,7 @@ ActiveStorage::Blob_3:
   key: ada-notes
   metadata: '{"identified":true,"analyzed":true}'
   service_name: local
-ActiveStorage::Blob_4:
+active_storage_blobs_4:
   id: 4
   byte_size: 14
   checksum: 7BaeFzDbu1/bbW/SKKiMZA==

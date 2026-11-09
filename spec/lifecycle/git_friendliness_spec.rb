@@ -34,8 +34,8 @@ RSpec.describe "Lifecycle - Git-friendliness" do
   it "adds a new record without changing the other records' lines" do
     after = session('Post.create!(author: Author.first, title: "Tehanu")')
 
-    expect(after["posts.yml"]).to include("Post_3:\n  id: 3\n")
-    expect(after["posts.yml"].sub(/^Post_3:\n(?:  .*\n)*/, "")).to eq(@before["posts.yml"])
+    expect(after["posts.yml"]).to include("posts_3:\n  id: 3\n")
+    expect(after["posts.yml"].sub(/^posts_3:\n(?:  .*\n)*/, "")).to eq(@before["posts.yml"])
   end
 
   it "removes the file of a table whose rows are all deleted" do

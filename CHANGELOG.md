@@ -10,12 +10,18 @@ This project adheres to [Break Versioning](https://www.taoensso.com/break-versio
   - ERB is no longer evaluated, and `$LABEL` is no longer replaced with the record's label.
   - A missing key loads as `NULL` instead of the column default.
   - Ids, timestamps and enum values are no longer filled in or looked up. If you add records to the YAML by hand, give them every column they need, including the id.
+- Dumping works per table instead of per model. Every table gets dumped, including tables without a model, except Rails' own `schema_migrations` and `ar_internal_metadata`.
+  - Labels are the table name and all primary key values, e.g. `posts_1` instead of `Post_1`. With a composite primary key, values containing `_` or `"` are quoted. This changes every label once.
+  - Tables without a primary key, e.g. `has_and_belongs_to_many` join tables, are dumped as a list of rows instead of a mapping.
 
 ### Non-breaking
 
 - Dump columns in alphabetical order, after the primary key columns. The order no longer depends on when a migration added a column. This reorders the keys in your YAML files once.
 - Fix JSON columns getting encoded a second time when loading.
 - Fix tables with generated columns: the dump leaves those columns out, so loading no longer fails on them.
+- Fix single-table inheritance: all rows of a table end up in its file, instead of each class overwriting the file with its own rows.
+- Support primary keys not called `id`, and composite primary keys.
+- Validate each row once, with the validations of its own class. Rows whose single-table inheritance class does not exist are reported as invalid.
 - Fix records hidden by a `default_scope`: they are now validated before dumping, and a table whose records are all hidden is no longer left out of the dump.
 
 ## [0.2.1] - 2026-05-08

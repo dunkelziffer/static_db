@@ -21,8 +21,8 @@ RSpec.describe "Lifecycle - Applying a migration" do
 
   it "gives existing rows the new columns' defaults, in the YAML and in the next session" do
     expect(YAML.safe_load(app.files["articles.yml"])).to eq(
-      "Article_1" => { "id" => 1, "title" => "Old", "featured" => 0, "rating" => 3 },
-      "Article_2" => { "id" => 2, "title" => "Older", "featured" => 0, "rating" => 3 }
+      "articles_1" => { "id" => 1, "title" => "Old", "featured" => 0, "rating" => 3 },
+      "articles_2" => { "id" => 2, "title" => "Older", "featured" => 0, "rating" => 3 }
     )
 
     expect(app.console(static_db: "on")).to exit_successfully
@@ -39,12 +39,12 @@ RSpec.describe "Lifecycle - Applying a migration" do
   it "dumps the new columns in alphabetical order and keeps them there in the next session" do
     expect(app.files).to match_files("articles.yml" => <<~YAML)
       ---
-      Article_1:
+      articles_1:
         id: 1
         featured: 0
         rating: 3
         title: Old
-      Article_2:
+      articles_2:
         id: 2
         featured: 0
         rating: 3

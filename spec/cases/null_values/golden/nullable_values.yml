@@ -1,7 +1,7 @@
 ---
-NullableValue_1:
+nullable_values_1:
   id: 1
-NullableValue_2:
+nullable_values_2:
   id: 2
   binary_value: ''
   boolean_value: 0

@@ -1,0 +1,16 @@
+---
+vehicles_1:
+  id: 1
+  name: Generic vehicle
+vehicles_2:
+  id: 2
+  name: Car
+  type: Car
+vehicles_3:
+  id: 3
+  name: Bike
+  type: Bike
+vehicles_4:
+  id: 4
+  name: Another car
+  type: Car

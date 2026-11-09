@@ -1,34 +1,34 @@
 ---
-UnicodeValue_1:
+unicode_values_1:
   id: 1
   value: Grüße aus München
-UnicodeValue_2:
+unicode_values_2:
   id: 2
   value: 日本語のテキスト
-UnicodeValue_3:
+unicode_values_3:
   id: 3
   value: עברית ושלום
-UnicodeValue_4:
+unicode_values_4:
   id: 4
   value: مرحبا بالعالم
-UnicodeValue_5:
+unicode_values_5:
   id: 5
   value: "emoji \U0001F600 and skin tone \U0001F44D\U0001F3FD"
-UnicodeValue_6:
+unicode_values_6:
   id: 6
   value: "family \U0001F468‍\U0001F469‍\U0001F467 joined with zero-width joiners"
-UnicodeValue_7:
+unicode_values_7:
   id: 7
   value: é decomposed (NFD)
-UnicodeValue_8:
+unicode_values_8:
   id: 8
   value: é composed (NFC)
-UnicodeValue_9:
+unicode_values_9:
   id: 9
   value: non breaking space
-UnicodeValue_10:
+unicode_values_10:
   id: 10
   value: zero​width space
-UnicodeValue_11:
+unicode_values_11:
   id: 11
   value: "byte order mark \uFEFF inside"

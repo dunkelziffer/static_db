@@ -1,12 +1,12 @@
 ---
-DefaultedValue_1:
+defaulted_values_1:
   id: 1
-DefaultedValue_2:
+defaulted_values_2:
   id: 2
   count: 5
   flavor: chocolate
   published: 0
-DefaultedValue_3:
+defaulted_values_3:
   id: 3
   count: 0
   flavor: vanilla

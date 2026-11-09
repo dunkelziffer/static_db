@@ -1,10 +1,10 @@
 ---
-Author_1:
+authors_1:
   id: 1
   created_at: '2026-03-14 09:26:53.589793'
   name: Otfried Preußler
   updated_at: '2026-03-14 09:26:53.589793'
-Author_2:
+authors_2:
   id: 2
   created_at: '2026-03-14 09:26:53.589793'
   name: Ursula K. Le Guin

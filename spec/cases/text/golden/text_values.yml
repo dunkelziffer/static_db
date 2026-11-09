@@ -1,65 +1,65 @@
 ---
-TextValue_1:
+text_values_1:
   id: 1
   body: ''
-TextValue_2:
+text_values_2:
   id: 2
   body: " "
-TextValue_3:
+text_values_3:
   id: 3
   body: "  leading spaces"
-TextValue_4:
+text_values_4:
   id: 4
   body: 'trailing spaces  '
-TextValue_5:
+text_values_5:
   id: 5
   body: "\n"
-TextValue_6:
+text_values_6:
   id: 6
   body: 'one line
 
     '
-TextValue_7:
+text_values_7:
   id: 7
   body: |-
     two
     lines
-TextValue_8:
+text_values_8:
   id: 8
   body: |
     two
     lines
-TextValue_9:
+text_values_9:
   id: 9
   body: |+
     ends with blank lines
 
 
-TextValue_10:
+text_values_10:
   id: 10
   body: |2-
 
 
     starts with blank lines
-TextValue_11:
+text_values_11:
   id: 11
   body: |2-
       indented
         block
-TextValue_12:
+text_values_12:
   id: 12
   body: "\ttab\tseparated"
-TextValue_13:
+text_values_13:
   id: 13
   body: "windows\r\nline endings\r\n"
-TextValue_14:
+text_values_14:
   id: 14
   body: 'a long line that YAML might fold a long line that YAML might fold a long
     line that YAML might fold a long line that YAML might fold a long line that YAML
     might fold a long line that YAML might fold a long line that YAML might fold a
     long line that YAML might fold a long line that YAML might fold a long line that
     YAML might fold '
-TextValue_15:
+text_values_15:
   id: 15
   body: "a paragraph of text a paragraph of text a paragraph of text a paragraph of
     text a paragraph of text a paragraph of text a paragraph of text a paragraph of
