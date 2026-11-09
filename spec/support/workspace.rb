@@ -2,7 +2,8 @@ require "fileutils"
 require "tmpdir"
 
 # One case's app from spec/cases/<name>/ (schema, models, factories, migrations), plus
-# throwaway state: a database directory and the data directory static_db reads and writes.
+# throwaway state: a database directory, the data directory static_db reads and writes,
+# and the directory Active Storage keeps its files in.
 class Workspace
   CASES = Pathname(__dir__).join("..", "cases").expand_path
 
@@ -24,6 +25,7 @@ class Workspace
 
   def data_dir = root.join("data")
   def db_dir = root.join("db")
+  def storage_dir = root.join("storage")
   def schema_path = root.join("schema.rb")
   def golden_dir = case_dir.join("golden")
 
@@ -34,7 +36,8 @@ class Workspace
       "SCHEMA" => schema_path.to_s,
       "DUMMY_CASE_DIR" => case_dir.to_s,
       "DUMMY_DATA_DIR" => data_dir.to_s,
-      "DUMMY_DB_DIR" => db_dir.to_s
+      "DUMMY_DB_DIR" => db_dir.to_s,
+      "DUMMY_STORAGE_DIR" => storage_dir.to_s
     }.merge(overrides)
   end
 
