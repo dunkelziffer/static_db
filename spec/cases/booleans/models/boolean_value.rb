@@ -1,0 +1,2 @@
+class BooleanValue < ApplicationRecord
+end

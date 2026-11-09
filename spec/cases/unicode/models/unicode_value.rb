@@ -1,0 +1,2 @@
+class UnicodeValue < ApplicationRecord
+end

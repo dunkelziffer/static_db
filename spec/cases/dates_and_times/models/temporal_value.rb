@@ -1,0 +1,2 @@
+class TemporalValue < ApplicationRecord
+end

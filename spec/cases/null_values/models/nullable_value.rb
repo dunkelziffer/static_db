@@ -1,0 +1,2 @@
+class NullableValue < ApplicationRecord
+end

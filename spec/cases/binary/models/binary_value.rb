@@ -1,0 +1,2 @@
+class BinaryValue < ApplicationRecord
+end

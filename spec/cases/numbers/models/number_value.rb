@@ -1,0 +1,2 @@
+class NumberValue < ApplicationRecord
+end

@@ -1,0 +1,12 @@
+# Every spec workspace brings its own database directory, so no two cases share a database.
+default: &default
+  adapter: sqlite3
+  timeout: 5000
+
+development:
+  <<: *default
+  database: <%= File.join(ENV.fetch("DUMMY_DB_DIR", "db"), "development.sqlite3") %>
+
+test:
+  <<: *default
+  database: <%= File.join(ENV.fetch("DUMMY_DB_DIR", "db"), "test.sqlite3") %>

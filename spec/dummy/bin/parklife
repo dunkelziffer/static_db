@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+# Stand-in for the `parklife` executable. static_db only looks at the program name and
+# the first argument. `parklife build` then boots the app through its Parkfile, which is
+# what requiring the environment does here.
+require_relative "../config/environment"
