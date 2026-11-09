@@ -1,9 +1,9 @@
 ---
 Note_1:
   id: 1
-  title: Visible
   archived: 0
+  title: Visible
 Note_2:
   id: 2
-  title: Archived
   archived: 1
+  title: Archived

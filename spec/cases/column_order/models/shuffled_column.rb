@@ -1,0 +1,2 @@
+class ShuffledColumn < ApplicationRecord
+end

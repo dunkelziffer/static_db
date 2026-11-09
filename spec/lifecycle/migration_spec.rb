@@ -31,4 +31,28 @@ RSpec.describe "Lifecycle - Applying a migration" do
       { "id" => 2, "title" => "Older", "featured" => 0, "rating" => 3 }
     ])
   end
+
+  # A migration appends its columns to the table, so a dump in database order lists them
+  # last. Alphabetical order keeps the YAML independent of when a column was added, and of
+  # whether the next session's database comes from the migration or from schema.rb (which
+  # Rails 8.1.3 writes with sorted columns and 8.1.4 does not).
+  it "dumps the new columns in alphabetical order and keeps them there in the next session" do
+    expect(app.files).to match_files("articles.yml" => <<~YAML)
+      ---
+      Article_1:
+        id: 1
+        featured: 0
+        rating: 3
+        title: Old
+      Article_2:
+        id: 2
+        featured: 0
+        rating: 3
+        title: Older
+    YAML
+
+    migrated = app.files
+    expect(app.console(static_db: "on")).to exit_successfully
+    expect(app.files).to match_files(migrated)
+  end
 end

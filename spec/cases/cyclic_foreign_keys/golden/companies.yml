@@ -1,8 +1,8 @@
 ---
 Company_1:
   id: 1
-  name: Acme
   ceo_id: 1
+  name: Acme
 Company_2:
   id: 2
   name: Startup without a CEO

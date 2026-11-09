@@ -3,9 +3,9 @@ NullableValue_1:
   id: 1
 NullableValue_2:
   id: 2
+  binary_value: ''
+  boolean_value: 0
+  float_value: 0.0
+  integer_value: 0
   string_value: ''
   text_value: ''
-  integer_value: 0
-  float_value: 0.0
-  boolean_value: 0
-  binary_value: ''

@@ -1,41 +1,41 @@
 ---
 ActiveStorage::Blob_1:
   id: 1
-  key: ada-avatar
-  filename: ada-avatar.txt
-  content_type: text/plain
-  metadata: '{"identified":true,"analyzed":true}'
-  service_name: local
   byte_size: 12
   checksum: XS9tZ84I9efUltMiwFPiLA==
+  content_type: text/plain
   created_at: '2026-03-14 09:26:53.589793'
+  filename: ada-avatar.txt
+  key: ada-avatar
+  metadata: '{"identified":true,"analyzed":true}'
+  service_name: local
 ActiveStorage::Blob_2:
   id: 2
-  key: ada-cv
-  filename: ada-cv.txt
-  content_type: text/plain
-  metadata: '{"identified":true,"analyzed":true}'
-  service_name: local
   byte_size: 8
   checksum: uAkj14+jqCnSyA7w2dhqJQ==
+  content_type: text/plain
   created_at: '2026-03-14 09:26:53.589793'
+  filename: ada-cv.txt
+  key: ada-cv
+  metadata: '{"identified":true,"analyzed":true}'
+  service_name: local
 ActiveStorage::Blob_3:
   id: 3
-  key: ada-notes
-  filename: ada-notes.txt
-  content_type: text/plain
-  metadata: '{"identified":true,"analyzed":true}'
-  service_name: local
   byte_size: 11
   checksum: aS/R1Wjx+n/vRTGR0zudzQ==
-  created_at: '2026-03-14 09:26:53.589793'
-ActiveStorage::Blob_4:
-  id: 4
-  key: grace-avatar
-  filename: grace-avatar.txt
   content_type: text/plain
+  created_at: '2026-03-14 09:26:53.589793'
+  filename: ada-notes.txt
+  key: ada-notes
   metadata: '{"identified":true,"analyzed":true}'
   service_name: local
+ActiveStorage::Blob_4:
+  id: 4
   byte_size: 14
   checksum: 7BaeFzDbu1/bbW/SKKiMZA==
+  content_type: text/plain
   created_at: '2026-03-14 09:26:53.589793'
+  filename: grace-avatar.txt
+  key: grace-avatar
+  metadata: '{"identified":true,"analyzed":true}'
+  service_name: local
