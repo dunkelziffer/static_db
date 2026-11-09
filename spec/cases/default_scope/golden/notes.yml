@@ -1,9 +1,9 @@
 ---
-Note_1:
+notes_1:
   id: 1
   archived: 0
   title: Visible
-Note_2:
+notes_2:
   id: 2
   archived: 1
   title: Archived

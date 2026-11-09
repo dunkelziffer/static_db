@@ -1,7 +1,7 @@
 ---
-BooleanValue_1:
+boolean_values_1:
   id: 1
   flag: 1
-BooleanValue_2:
+boolean_values_2:
   id: 2
   flag: 0

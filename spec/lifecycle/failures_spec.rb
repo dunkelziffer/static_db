@@ -5,7 +5,7 @@ RSpec.describe "Lifecycle - Failures" do
     it "aborts the boot with exit status 1 and skips the dump, keeping the files" do
       app.arrange { create(:post) }
       expect(app.rails("static:dump")).to exit_successfully
-      app.data_dir.join("posts.yml").write("Post_1:\n  title: [unclosed\n", mode: "a")
+      app.data_dir.join("posts.yml").write("posts_1:\n  title: [unclosed\n", mode: "a")
       broken = app.files
 
       result = app.console(static_db: "on")

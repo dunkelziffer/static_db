@@ -1,22 +1,22 @@
 ---
-JsonValue_1:
+json_values_1:
   id: 1
   payload: '{"a":1}'
-JsonValue_2:
+json_values_2:
   id: 2
   payload: '{"b":1,"a":2}'
-JsonValue_3:
+json_values_3:
   id: 3
   payload: "{}"
-JsonValue_4:
+json_values_4:
   id: 4
   payload: "[]"
-JsonValue_5:
+json_values_5:
   id: 5
   payload: '{"nested":{"list":[1,"two",null,true]}}'
-JsonValue_6:
+json_values_6:
   id: 6
   payload: '"just a string"'
-JsonValue_7:
+json_values_7:
   id: 7
   payload: 42

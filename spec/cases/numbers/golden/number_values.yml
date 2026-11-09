@@ -1,33 +1,33 @@
 ---
-NumberValue_1:
+number_values_1:
   id: 1
   decimal_value: 0.1
   float_value: 0.1
-NumberValue_2:
+number_values_2:
   id: 2
   decimal_value: 12.34
   float_value: 0.30000000000000004
-NumberValue_3:
+number_values_3:
   id: 3
   decimal_value: 0
   float_value: 1.0
-NumberValue_4:
+number_values_4:
   id: 4
   decimal_value: -99999999.9999
   float_value: -2.5
-NumberValue_5:
+number_values_5:
   id: 5
   decimal_value: 1
   float_value: 1.0e-300
-NumberValue_6:
+number_values_6:
   id: 6
   decimal_value: 3.1416
   float_value: 1.7976931348623157e+308
-NumberValue_7:
+number_values_7:
   id: 7
   decimal_value: 0.0001
   float_value: 123456789.12345679
-NumberValue_8:
+number_values_8:
   id: 8
   decimal_value: -0.5
   float_value: 9.007199254740992e+15

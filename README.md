@@ -55,6 +55,12 @@ The boot sequence hooks are inactive in all other cases, e.g.:
 - When you run migrations: `bin/rails db:migrate`
 - When you run any other rake tasks
 
+## Data format
+
+Every table with rows gets a YAML file named after it, except Rails' own `schema_migrations` and `ar_internal_metadata`. Records are ordered by primary key and labeled with the table name and their primary key values, e.g. `posts_1`. Their columns come in alphabetical order, after the primary key columns. `NULL` values are left out.
+
+> ⚠️ A table without a primary key, like the join table of a `has_and_belongs_to_many` association, has nothing to label its rows with. It gets dumped as a list of rows instead, ordered by all columns, which makes for less readable diffs. Prefer tables with a primary key, e.g. `has_many :through` with a join model.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/dunkelziffer/static_db](https://github.com/dunkelziffer/static_db).

@@ -48,11 +48,13 @@ module StaticDb
       puts green("Done!")
     end
 
+    # A mapping from labels to records, or a list of records for a table without a primary key.
     def read_rows(file)
-      records = YAML.safe_load_file(file, permitted_classes: [ Date, Time ], aliases: true) || {}
-      raise "#{file} is not a mapping of labels to records" unless records.is_a?(Hash) && records.values.all?(Hash)
+      records = YAML.safe_load_file(file, permitted_classes: [ Date, Time ], aliases: true) || []
+      records = records.values if records.is_a?(Hash)
+      raise "#{file} is neither a mapping of labels to records nor a list of records" unless records.is_a?(Array) && records.all?(Hash)
 
-      records.values
+      records
     end
 
     def insert(connection, table, rows)

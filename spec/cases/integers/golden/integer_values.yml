@@ -1,17 +1,17 @@
 ---
-IntegerValue_1:
+integer_values_1:
   id: 1
   big: 0
   regular: 0
-IntegerValue_2:
+integer_values_2:
   id: 2
   big: 9007199254740993
   regular: -1
-IntegerValue_3:
+integer_values_3:
   id: 3
   big: 9223372036854775807
   regular: 2147483647
-IntegerValue_4:
+integer_values_4:
   id: 4
   big: -9223372036854775808
   regular: -2147483648

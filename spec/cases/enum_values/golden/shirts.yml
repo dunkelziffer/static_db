@@ -1,10 +1,10 @@
 ---
-Shirt_1:
+shirts_1:
   id: 1
   size: S
-Shirt_2:
+shirts_2:
   id: 2
   size: L
-Shirt_3:
+shirts_3:
   id: 3
   size: medium

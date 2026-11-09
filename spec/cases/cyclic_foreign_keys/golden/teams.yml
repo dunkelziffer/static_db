@@ -1,9 +1,9 @@
 ---
-Team_1:
+teams_1:
   id: 1
   company_id: 1
   name: Platform
-Team_2:
+teams_2:
   id: 2
   company_id: 1
   name: Design

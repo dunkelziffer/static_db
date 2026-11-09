@@ -1,0 +1,29 @@
+---
+translations_de_bye:
+  locale: de
+  key: bye
+  value: Tschüss
+translations_de_hello:
+  locale: de
+  key: hello
+  value: Hallo
+translations_de_"user_name":
+  locale: de
+  key: user_name
+  value: Benutzername
+translations_en_hello:
+  locale: en
+  key: hello
+  value: Hello
+translations_en_"say \"hi\"":
+  locale: en
+  key: say "hi"
+  value: Hi!
+translations_pt_"BR_hello":
+  locale: pt
+  key: BR_hello
+  value: Olá, Brasil
+translations_"pt_BR"_hello:
+  locale: pt_BR
+  key: hello
+  value: Olá
