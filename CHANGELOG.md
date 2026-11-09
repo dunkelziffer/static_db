@@ -15,6 +15,7 @@ This project adheres to [Break Versioning](https://www.taoensso.com/break-versio
 
 - Dump columns in alphabetical order, after the primary key columns. The order no longer depends on when a migration added a column. This reorders the keys in your YAML files once.
 - Fix JSON columns getting encoded a second time when loading.
+- Fix tables with generated columns: the dump leaves those columns out, so loading no longer fails on them.
 - Fix records hidden by a `default_scope`: they are now validated before dumping, and a table whose records are all hidden is no longer left out of the dump.
 
 ## [0.2.1] - 2026-05-08

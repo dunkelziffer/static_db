@@ -74,18 +74,19 @@ module StaticDb
     end
 
     def data(model)
-      columns = sorted_columns(model)
+      columns = dumped_columns(model)
 
       model.unscoped.order(:id).to_h do |instance|
         [ "#{model}_#{instance.id}", instance_data(instance, columns) ]
       end
     end
 
-    # Primary key columns first, then the others alphabetically, so the order does not depend
-    # on when a migration added a column.
-    def sorted_columns(model)
+    # Generated columns are left out: the database computes them and refuses values for them.
+    # Primary key columns come first, then the others alphabetically, so the order does not
+    # depend on when a migration added a column.
+    def dumped_columns(model)
       primary_key = Array(model.primary_key)
-      model.columns.sort_by { |column| [ primary_key.index(column.name) || primary_key.size, column.name ] }
+      model.columns.reject(&:virtual?).sort_by { |column| [ primary_key.index(column.name) || primary_key.size, column.name ] }
     end
 
     def instance_data(instance, columns)
