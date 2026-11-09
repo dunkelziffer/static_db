@@ -1,0 +1,2 @@
+class DefaultedValue < ApplicationRecord
+end

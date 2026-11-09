@@ -1,0 +1,10 @@
+---
+Snippet_1:
+  id: 1
+  body: "$LABEL"
+Snippet_2:
+  id: 2
+  body: Fixtures replace $LABEL with the fixture's name.
+Snippet_3:
+  id: 3
+  body: export LABEL=x; echo $LABEL

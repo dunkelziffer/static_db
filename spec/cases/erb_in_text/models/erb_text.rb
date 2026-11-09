@@ -1,0 +1,2 @@
+class ErbText < ApplicationRecord
+end

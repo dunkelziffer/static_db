@@ -1,0 +1,2 @@
+class JsonValue < ApplicationRecord
+end

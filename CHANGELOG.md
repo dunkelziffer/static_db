@@ -6,11 +6,14 @@ This project adheres to [Break Versioning](https://www.taoensso.com/break-versio
 
 ### Breaking
 
--
+- Loading no longer goes through Rails fixtures. It inserts the YAML values as they are, so values that Rails fixtures used to change now load unchanged.
+  - ERB is no longer evaluated, and `$LABEL` is no longer replaced with the record's label.
+  - A missing key loads as `NULL` instead of the column default.
+  - Ids, timestamps and enum values are no longer filled in or looked up. If you add records to the YAML by hand, give them every column they need, including the id.
 
 ### Non-breaking
 
--
+- Fix JSON columns getting encoded a second time when loading.
 
 ## [0.2.1] - 2026-05-08
 
