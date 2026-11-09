@@ -23,7 +23,7 @@ module StaticDb
       errors = []
 
       models_to_be_saved.each do |model|
-        model.find_each do |record|
+        model.unscoped.find_each do |record|
           next if record.valid?
 
           debug_data = { model: model.name, id: record.id, errors: record.errors.full_messages }
@@ -101,7 +101,7 @@ module StaticDb
       Rails.application.eager_load!
 
       ActiveRecord::Base.descendants.select do |model|
-         model.table_exists? && model.any? && model != ActiveRecord::SchemaMigration
+         model.table_exists? && model.unscoped.any? && model != ActiveRecord::SchemaMigration
       end
     end
 
