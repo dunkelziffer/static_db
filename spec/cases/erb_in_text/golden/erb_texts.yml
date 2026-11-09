@@ -1,0 +1,16 @@
+---
+ErbText_1:
+  id: 1
+  body: Use <%= 1 + 1 %> to print two.
+ErbText_2:
+  id: 2
+  body: "<% 3.times do %>x<% end %>"
+ErbText_3:
+  id: 3
+  body: "<%# looks like a comment %>"
+ErbText_4:
+  id: 4
+  body: "<%% already escaped %>"
+ErbText_5:
+  id: 5
+  body: Only a closing %> tag
