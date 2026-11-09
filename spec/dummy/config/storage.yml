@@ -1,0 +1,3 @@
+local:
+  service: Disk
+  root: <%= ENV.fetch("DUMMY_STORAGE_DIR", "tmp/storage") %>
