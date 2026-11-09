@@ -61,6 +61,32 @@ Every table with rows gets a YAML file named after it, except Rails' own `schema
 
 > ⚠️ A table without a primary key, like the join table of a `has_and_belongs_to_many` association, has nothing to label its rows with. It gets dumped as a list of rows instead, ordered by all columns, which makes for less readable diffs. Prefer tables with a primary key, e.g. `has_many :through` with a join model.
 
+## Workflows
+
+Both workflows run the rake tasks by hand, so make sure no server is running: it would load or dump on its own.
+
+### Applying a migration
+
+The hooks don't run for `db:migrate`, so load the YAML files first and dump the migrated database afterwards:
+
+```sh
+bin/rails static:load
+# write the migration
+bin/rails db:migrate static:dump
+```
+
+### Upgrading static_db
+
+When the [CHANGELOG](CHANGELOG.md) lists a breaking change, the new version may read or write your YAML files differently. Load them with the version that wrote them, then dump them with the new one:
+
+```sh
+bin/rails static:load # still on the old version
+bundle update static_db
+bin/rails static:dump
+```
+
+Review the diff before you commit it.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/dunkelziffer/static_db](https://github.com/dunkelziffer/static_db).
