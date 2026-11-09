@@ -44,4 +44,22 @@ RSpec.describe "Lifecycle - Failures" do
       expect(app.files).to match_files(dumped)
     end
   end
+
+  # The dump only reads the database, so whatever makes it fail, it can be retried.
+  describe "a dump that fails" do
+    it "leaves the database as it was, so the dump can be retried" do
+      arranged = app.arrange { create(:post) }
+      blocker = app.root.join("blocker")
+      blocker.write("A file where the data directory's parent should be")
+      unwritable = { "DUMMY_DATA_DIR" => blocker.join("data").to_s }
+
+      expect(app.console(static_db: "dump", env: unwritable)).not_to exit_successfully
+
+      expect(app.snapshot).to eq(arranged)
+      blocker.delete
+      expect(app.rails("static:dump", env: unwritable)).to exit_successfully
+      expect(app.rails("static:dump")).to exit_successfully
+      expect(Snapshot.files(blocker.join("data"))).to match_files(app.files)
+    end
+  end
 end

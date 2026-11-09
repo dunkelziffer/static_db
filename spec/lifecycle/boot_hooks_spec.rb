@@ -4,14 +4,15 @@
 RSpec.describe "Lifecycle - Boot hooks" do
   let(:app) { workspace("blog") }
   let(:root_data_dir) { DummyApp::ROOT.join("content") }
+  let(:env) { {} }
 
   before do
-    app.arrange { create(:post, title: "Dumped") }
-    expect(app.rails("static:dump")).to exit_successfully
-    app.change { create(:post, title: "Not dumped yet") }
+    app.arrange(env:) { create(:post, title: "Dumped") }
+    expect(app.rails("static:dump", env:)).to exit_successfully
+    app.change(env:) { create(:post, title: "Not dumped yet") }
   end
 
-  def titles = app.snapshot["posts"].map { |post| post["title"] }
+  def titles = app.snapshot(env:)["posts"].map { |post| post["title"] }
   def mtimes = app.data_dir.children.to_h { |file| [ file.basename.to_s, file.mtime ] }
 
   shared_examples "a command that runs the hooks" do
@@ -66,6 +67,14 @@ RSpec.describe "Lifecycle - Boot hooks" do
 
   describe "bin/rails db:migrate" do
     let(:run) { app.rails("db:migrate", env: { "STATIC_DB" => "on" }) }
+
+    it_behaves_like "a command that leaves the hooks alone"
+  end
+
+  # What spec/rails_helper.rb or test/test_helper.rb does.
+  describe "a test suite booting the app" do
+    let(:env) { { "RAILS_ENV" => "test" } }
+    let(:run) { DummyApp.run(RbConfig.ruby, "-e", 'require "./config/environment"', env: app.env("STATIC_DB" => "on", **env)) }
 
     it_behaves_like "a command that leaves the hooks alone"
   end
