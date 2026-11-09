@@ -13,6 +13,7 @@ This project adheres to [Break Versioning](https://www.taoensso.com/break-versio
 
 ### Non-breaking
 
+- Dump columns in alphabetical order, after the primary key columns. The order no longer depends on when a migration added a column. This reorders the keys in your YAML files once.
 - Fix JSON columns getting encoded a second time when loading.
 
 ## [0.2.1] - 2026-05-08
