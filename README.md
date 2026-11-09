@@ -1,5 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/static_db.svg)](https://rubygems.org/gems/static_db)
-[![Build](https://github.com/dunkelziffer/static_db/workflows/Build/badge.svg)](https://github.com/dunkelziffer/static_db/actions)
+[![CI](https://github.com/dunkelziffer/static_db/actions/workflows/ci.yml/badge.svg)](https://github.com/dunkelziffer/static_db/actions/workflows/ci.yml)
 
 # static_db
 
@@ -58,6 +58,8 @@ The boot sequence hooks are inactive in all other cases, e.g.:
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/dunkelziffer/static_db](https://github.com/dunkelziffer/static_db).
+
+Run the tests with `bundle exec rspec` and the linter with `bundle exec rubocop`. Each directory in `spec/cases/` is a small app with its own schema, models and golden YAML files. After an intended change to the dump format, regenerate the golden files with `UPDATE_GOLDEN=1 bundle exec rspec` and review the diff.
 
 ## License
 

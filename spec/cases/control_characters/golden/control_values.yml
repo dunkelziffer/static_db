@@ -1,0 +1,31 @@
+---
+ControlValue_1:
+  id: 1
+  value: "bell\a"
+ControlValue_2:
+  id: 2
+  value: "escape \e[31mred\e[0m"
+ControlValue_3:
+  id: 3
+  value: "start of heading\x01"
+ControlValue_4:
+  id: 4
+  value: "backspace\b"
+ControlValue_5:
+  id: 5
+  value: "vertical\vtab"
+ControlValue_6:
+  id: 6
+  value: "form\ffeed"
+ControlValue_7:
+  id: 7
+  value: "delete\x7F"
+ControlValue_8:
+  id: 8
+  value: "next line\Ncharacter"
+ControlValue_9:
+  id: 9
+  value: 'line     separator'
+ControlValue_10:
+  id: 10
+  value: 'paragraph     separator'

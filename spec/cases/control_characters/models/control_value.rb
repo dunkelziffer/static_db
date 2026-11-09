@@ -1,0 +1,2 @@
+class ControlValue < ApplicationRecord
+end

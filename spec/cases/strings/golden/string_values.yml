@@ -1,0 +1,160 @@
+---
+StringValue_1:
+  id: 1
+  value: plain
+StringValue_2:
+  id: 2
+  value: 'yes'
+StringValue_3:
+  id: 3
+  value: 'no'
+StringValue_4:
+  id: 4
+  value: 'on'
+StringValue_5:
+  id: 5
+  value: 'off'
+StringValue_6:
+  id: 6
+  value: "y"
+StringValue_7:
+  id: 7
+  value: "n"
+StringValue_8:
+  id: 8
+  value: 'true'
+StringValue_9:
+  id: 9
+  value: 'false'
+StringValue_10:
+  id: 10
+  value: 'True'
+StringValue_11:
+  id: 11
+  value: 'NO'
+StringValue_12:
+  id: 12
+  value: 'null'
+StringValue_13:
+  id: 13
+  value: 'Null'
+StringValue_14:
+  id: 14
+  value: "~"
+StringValue_15:
+  id: 15
+  value: nil
+StringValue_16:
+  id: 16
+  value: '0123'
+StringValue_17:
+  id: 17
+  value: '123'
+StringValue_18:
+  id: 18
+  value: "-5"
+StringValue_19:
+  id: 19
+  value: '1.5'
+StringValue_20:
+  id: 20
+  value: ".5"
+StringValue_21:
+  id: 21
+  value: 1e5
+StringValue_22:
+  id: 22
+  value: '1_000'
+StringValue_23:
+  id: 23
+  value: '0x1F'
+StringValue_24:
+  id: 24
+  value: 0o17
+StringValue_25:
+  id: 25
+  value: '0b101'
+StringValue_26:
+  id: 26
+  value: '12:30'
+StringValue_27:
+  id: 27
+  value: '1:20:30'
+StringValue_28:
+  id: 28
+  value: ".inf"
+StringValue_29:
+  id: 29
+  value: "-.Inf"
+StringValue_30:
+  id: 30
+  value: ".nan"
+StringValue_31:
+  id: 31
+  value: '2020-01-01'
+StringValue_32:
+  id: 32
+  value: '2020-01-01 12:00:00'
+StringValue_33:
+  id: 33
+  value: ":symbol"
+StringValue_34:
+  id: 34
+  value: "- dash"
+StringValue_35:
+  id: 35
+  value: "# hash"
+StringValue_36:
+  id: 36
+  value: 'key: value'
+StringValue_37:
+  id: 37
+  value: 'trailing colon:'
+StringValue_38:
+  id: 38
+  value: comma, separated
+StringValue_39:
+  id: 39
+  value: "!tag"
+StringValue_40:
+  id: 40
+  value: "&anchor"
+StringValue_41:
+  id: 41
+  value: "*alias"
+StringValue_42:
+  id: 42
+  value: "? question"
+StringValue_43:
+  id: 43
+  value: "| pipe"
+StringValue_44:
+  id: 44
+  value: "> folded"
+StringValue_45:
+  id: 45
+  value: "---"
+StringValue_46:
+  id: 46
+  value: "..."
+StringValue_47:
+  id: 47
+  value: "'single'"
+StringValue_48:
+  id: 48
+  value: '"double"'
+StringValue_49:
+  id: 49
+  value: "%percent"
+StringValue_50:
+  id: 50
+  value: "@at"
+StringValue_51:
+  id: 51
+  value: "`backtick`"
+StringValue_52:
+  id: 52
+  value: "{ braces }"
+StringValue_53:
+  id: 53
+  value: "[ brackets ]"

@@ -1,0 +1,2 @@
+class TextValue < ApplicationRecord
+end
